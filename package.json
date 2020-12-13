@@ -1,0 +1,27 @@
+{
+  "name": "zibaldone",
+  "version": "1.0.0",
+  "description": "a note taker app",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test note",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skalback/Zibaldone.git"
+  },
+  "keywords": [
+    "note-taker"
+  ],
+  "author": "seth kalback",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skalback/Zibaldone/issues"
+  },
+  "homepage": "https://github.com/skalback/Zibaldone#readme"
+}
