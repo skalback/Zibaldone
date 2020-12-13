@@ -1,7 +1,7 @@
 const store = require("../db/store");
 const router = require("express").Router();
 
-// Retrieve all saved notes with a GET
+// Retrieve all saved notes with GET
 router.get("/notes", (req, res) => {
   store
     .getNotes()
