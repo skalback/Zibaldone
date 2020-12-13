@@ -1,30 +1,31 @@
-const router = require("express").Router();
 const store = require("../db/store");
+const router = require("express").Router();
 
-// GET "/api/notes" responds with all notes from the database
-console.log("api route GET");
+// Retrieve all saved notes with a GET
 router.get("/notes", (req, res) => {
   store
     .getNotes()
     .then((notes) => res.json(notes))
     .catch((err) => res.status(500).json(err));
 });
+//console.log("api route GET");
 
-console.log("api route POST");
+// Save note
 router.post("/notes", (req, res) => {
   store
     .addNote(req.body)
     .then((note) => res.json(note))
     .catch((err) => res.status(500).json(err));
 });
+//console.log("api route POST");
 
-// DELETE "/api/notes" deletes the note with an id equal to req.params.id
-console.log("api route DELETE");
+// Remove notes with a given id
 router.delete("/notes/:id", (req, res) => {
   store
     .removeNote(req.params.id)
     .then(() => res.json({ ok: true }))
     .catch((err) => res.status(500).json(err));
 });
+//console.log("api route DELETE");
 
 module.exports = router;
